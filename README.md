@@ -37,8 +37,7 @@ contract Token {
    
   string public tokenName = "21BCG1005";
   string public tokenSymbol = "PUNIT";
-  uint public totalSupply = 0;
-…  // burn function
+  uint public totalSupply = 0;  // burn function
   function burnTokens(address _address, uint _amount) public {
   require(balances[_address] >= _amount, "Cannot burn more than balance tokens");
   totalSupply -= _amount;
